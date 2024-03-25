@@ -1,6 +1,6 @@
-# illusion's Workspace
+# illusion
 
-Bem-vindo ao illusion-s-Workspace! Aqui você encontrará uma variedade de projetos aleatórios, desde pequenos scripts até projetos mais elaborados. Este repositório é um espaço para experimentação, aprendizado e diversão. Sinta-se à vontade para explorar e contribuir!
+Bem-vindo ao illusion! Aqui você encontrará uma variedade de projetos aleatórios, desde pequenos scripts até projetos mais elaborados. Este repositório é um espaço para experimentação, aprendizado e diversão. Sinta-se à vontade para explorar e contribuir!
 
 ## Projetos Destacados
 
