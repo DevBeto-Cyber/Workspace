@@ -1,1 +1,0 @@
-local abu = 2
