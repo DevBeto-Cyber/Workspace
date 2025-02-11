@@ -459,6 +459,7 @@ local aa = {
 		local w = u('ScreenGui', {})
 		xpcall(function()
 			w.Parent = gethui and gethui() or gethiddenui and gethiddenui() or gethiddengui and gethiddengui() or get_hidden_ui and get_hidden_ui() or get_hidden_gui and get_hidden_gui() or game:GetService'CoreGui'
+			w.Name = "Library"
 		end, function()
 			w.DisplayOrder = 10;
 			w.Parent = j:WaitForChild('PlayerGui', math.huge)
