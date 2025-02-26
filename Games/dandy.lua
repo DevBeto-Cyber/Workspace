@@ -139,13 +139,6 @@ getgenv().config = {
 
 -- game-variable
 local currentRoom = w:FindFirstChild("CurrentRoom")
-while true do task.wait(5)
-for _, room in ipairs(currentRoom:GetChildren()) do
-  if room then
-    print(room.Name) end
-  end
-end
-
 local huma = lp.Character:FindFirstChild("Humanoid")
 
   local stats = tabs.Home:AddSection("Game Status")
@@ -686,3 +679,10 @@ end
     end
     }
   )
+  
+while true do task.wait(5)
+for _, room in ipairs(currentRoom:GetChildren()) do
+  if room then
+    print(room.Name) end
+  end
+end
