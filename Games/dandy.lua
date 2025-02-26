@@ -139,10 +139,12 @@ getgenv().config = {
 
 -- game-variable
 local currentRoom = w:FindFirstChild("CurrentRoom")
+while true do task.wait(5)
 for _, room in ipairs(currentRoom:GetChildren()) do
   if room then
     print(room.Name) end
   end
+end
 
 local huma = lp.Character:FindFirstChild("Humanoid")
 
@@ -380,7 +382,7 @@ local frameConnect
                 if not currentRoom then return end
                 
                 for _, room in ipairs(currentRoom:GetChildren()) do
-                    if room.Name:match("^Floor") then
+                    if room.Name:match("^Floor") or room.Name == "Diner" then
                         local generatorFolder = room:FindFirstChild("Generators")
                         if generatorFolder then
                             for _, generator in ipairs(generatorFolder:GetChildren()) do
@@ -465,7 +467,7 @@ end
                 if not currentRoom then return end
                 
                 for _, room in ipairs(currentRoom:GetChildren()) do
-                    if room.Name:match("^Floor") then
+                    if room.Name:match("^Floor") or room.Name == "Diner" then
                         local twistedsFolder = room:FindFirstChild("Monsters")
                         if twistedsFolder then
                             for _, monster in ipairs(twistedsFolder:GetChildren()) do
@@ -482,7 +484,7 @@ end
                                 else
                                     highlight.FillColor = Color3.new(1, 0, 0) -- Vermelho
                                 end
-                                
+                                print(monster.Name)
                                 highlight.OutlineColor = Color3.new(1, 1, 1)
                                 highlight.FillTransparency = 0.37
                                 highlight.OutlineTransparency = 0.67
@@ -516,7 +518,7 @@ end
             while getgenv().config.items do task.wait()
               if not currentRoom then return end
               for _, room in ipairs(currentRoom:GetChildren()) do
-                if room.Name:match("^Floor") then
+                if room.Name:match("^Floor") or room.Name == "Diner" then
                   local folder1 = room:FindFirstChild("Items")
                   if folder1 then
                     for _, item in ipairs(folder1:GetChildren()) do
