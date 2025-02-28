@@ -510,6 +510,14 @@ esp:AddToggle(
                                     local twistedsFolder = room:FindFirstChild("Monsters")
                                     if twistedsFolder then
                                         for _, monster in ipairs(twistedsFolder:GetChildren()) do
+                                          if specialMonsters[monster.Name] then
+                                            Fluent:Notify(
+                                              {
+                                                Title = "Ocalism Notify",
+                                                Content = monster.Name .. "has spawned!",
+                                                Duration = 2.5
+                                              }) 
+                                            end
                                             local highlight = monster:FindFirstChild("MnH")
                                             if not highlight then
                                                 highlight = Instance.new("Highlight")
